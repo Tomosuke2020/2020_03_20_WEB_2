@@ -1,0 +1,984 @@
+@charset="UTF-8";
+/*すべてのフォントを100%に*/
+*{
+    font-size:100%;
+}
+
+/*フォント*/
+body{
+  font-family: "Philosopher";
+}
+
+/*スマホ全体を中央揃えに*/
+@media screen and (max-width:700px){
+    body{
+        justify-content: center;
+    }
+}
+
+/*.html共通項目*/
+/*モバイルテスト*/
+.test{
+    background-color:blue;
+}
+/*min-width 700以上*/
+@media screen and (max-width:700px){
+    .test{background-color:yellow;}
+}
+
+/*****
+PCファーストでの記述
+PC「(min-width:760px)760px以上」
+モバイル「（max-width:400px)400px以内」
+******/
+
+
+/*header*/
+/*headerの大きさ*/
+.cafe{
+    margin: 1% 20% 0 20%;
+    padding:0;
+}
+
+@media screen and(max-width:700px){
+    .cafe-mb{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*コーヒーロゴの位置*/
+.coffee{
+    margin: auto 70% auto 0;
+    padding:0;
+}
+
+@media screen and(max-width:700px){
+    .coffee-mb{
+        background-color:blue;
+    }
+}
+
+
+/*PCロゴ画像の大きさを指定*/
+img.logo{
+    width:200px;
+    }
+
+/*index-navの位置*/
+.navi{
+    float:right;
+    display: flex;
+    padding: 0;
+    align-items:flex-end;
+}
+
+@media screen and(max-width:700px){
+    .navi-mb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*【共通】nav項目「・」の削除
+nav全ての余白の設定
+display指定で横並びにする
+*/
+header nav ul{
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+}
+
+/*ディスプレイの固定とリンクカラーの設定*/
+header nav ul li a,
+header nav ul li a:link,
+header nav ul li a:visited{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color:darkred;
+}
+
+/*リンクを選択したときのマウスオーバー*/
+header nav ul li a:hover{
+    color: aqua;
+}
+
+/*↑.htmlの共通項目終了*/
+
+
+/*↓ここからそれぞれのページへ*/
+
+/*index*/
+/*indexのみフルスクリーントップページ*/
+body.index-back{
+    background-attachment:fixed;
+    background-image:url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/c3b/9e5/3e3/main-bg.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:100vh;
+}
+
+
+/*テキストを中央揃えに*/
+main.index{
+    text-align: center;
+}
+
+
+/*スマホ専用テキストを中央揃えに*/
+@media screen and(max-width:700px){
+main.index{
+    padding: auto 5%;
+    height:400px;
+        }
+    
+}
+
+
+/*Well your make dayのタイトルのサイズと立ち位置*/
+.open h2{
+    margin-top: 80px;
+    margin-bottom:40px;
+    font-size:80px;
+}
+
+/*スマホ：Well your make dayのタイトルのサイズと立ち位置*/
+@media screen and(max-width:700px){
+    .open h2{
+        max-width:400px;
+        font-size:250%;
+    }
+    h2{
+        font-size:2px;
+    }
+}
+
+
+/*タイトルロゴのカラーを変える*/
+.top{
+    color: darkred;
+}
+
+/*サブタイトルのサイズの変更*/
+p.subtitle{
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+
+/*スマホのサブタイトルのサイズ変更*/
+@media screen and(max-width:700px){
+    p.subtitle{
+       padding:5px;
+    }
+}
+
+/*ボタンの装飾*/
+
+/*ボタンの縦の位置を調整*/
+div.login{
+    margin:5px auto 5px auto;
+}
+
+/*ボタンの大きさの指定*/
+button.button{
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-color:aquamarine;
+}
+
+/*ボタンをインラインブロック。文字の大きさと色の指定*/
+.button a{
+    display:inline-block;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+/*擬似：activeでボタンを押している感を演出*/
+.button,
+a:active{
+  -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+}
+
+
+/*↓ここからnews.htmlへ*/
+
+/*news_headerの位置*/
+.news-title{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    padding: 40px;
+}
+
+@media screen and (max-width:700px){
+.news-title{display: flex;
+    justify-content: center;}
+}
+
+.news-top{
+    padding:none none none 5px;
+    margin: none;
+}
+
+/*NEWSの背景*/
+.news-back
+{
+    background:no-repeat;
+background:url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/39e/08d/56b/news-bg.jpg");
+    height: 300px;
+}
+
+
+/*共通見出しを調整*/
+.news-logo{
+    color: darkred;
+    font-size:500%;
+}
+
+.news-head{
+    background-color: aqua;
+}
+
+/*メニューの調整*/
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width:700px){.grid-container,grid-mb-style{
+    display:block;
+    padding:15px;
+    }
+}
+
+.news-left{
+    grid-column: 2/4;
+    grid-row: 1/6;
+
+}
+.side{
+    grid-column: 5/6;
+    grid-row:1/3;
+
+}
+
+/*日付の背景*/
+.date-year{
+    width: 100px;
+    height:100px;
+    height:100px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+/*スマホ向け日付の背景*/
+@media screen and (max-width:700px){
+    .date-year{
+        max-width:400px;
+        max-height: 400px;
+        width:20%;
+        height:80%;}
+}
+
+/*日付を調整*/
+/*Newsの日付とタイトル*/
+
+/*日付の文字の位置を指定
+日付の立ち位置を指定*/
+.date-year{
+    text-align: center;
+    padding-top:20px;
+    float:left;
+}
+
+/*日付の立ち位置を指定*/
+@media screen and(max-width:700px){
+    .date-year{
+        padding:20%;
+        margin:0 0 0 5%;
+    }
+}
+
+/*日付のサイズ変更：下線を入れる*/
+h2.date{
+    font-size:25px;
+    border-bottom: 1px solid white;
+    padding-bottom:5px;
+}
+
+/*スマホ向け日付のサイズ変更：下線を入れる*/
+@media screen and(max-width:700px){
+    h2.date{
+        max-width: 400px;
+        border-bottom: 1px solid white;
+    }
+}
+
+/*スマホ向け日付の文字サイズを統一する*/
+@media screen and(max-width:700px){
+    .date,
+    .year{
+        max-width:400px;
+        font-size:4%;
+    }
+}
+
+/*年と下線の距離*/
+h2.year{
+    padding-top: 10px;
+}
+
+
+/*スマホ向け：年と下線の距離*/
+@media screen and(max-width:400px){
+    h2.year{
+        padding-top:none;
+    }
+}
+
+/*日付：年の文字色の変更*/
+h2.date,
+h2.year{
+    color: white;
+}
+
+/*News見出しの先に文字の装飾*/
+/*店内開発の〜*/
+h2.news-index{
+    float: none;
+    font-size:25px;
+    margin:3%;
+    line-height: 2;
+}
+
+/*スマホ向けNews見出し*/
+@media screen (max-width:400px){
+    
+    
+    h2{
+        float: left;
+        font-size:30%;
+    }
+    h2.news-index{
+    max-width:400px;
+    margin: 0;
+    font-size:50%;
+    line-height: none;
+    }
+}
+
+/*カテゴリー*/
+h3.news-index{
+    line-height: 2;
+}
+
+.news-index{
+    display: flex;
+}
+
+/*スマ仕様のカテゴリー*/
+@media screen and(max-width:400px)
+    {
+        h3.news-index{
+        line-height: 1;
+        margin: none;
+        }
+}
+
+/*見出しの文章の上を整理*/
+div.news-theme{
+    justify-content: center;
+    padding:0;
+}
+
+/*スマホ向け：見出しの文章の上を整理*/
+@media screen and(max-width:400px){
+    div.news-theme{
+        display: flex;
+        padding:50%;
+    }
+}
+    
+/*画像サイズを指定*/
+.pai{
+    width:100%;
+}
+
+/*スマホ画像サイズ*/
+@media screen and(max-width:700px){
+    .pai{width:100%;}}
+
+/*刺激されてくださいの文章に行間をつける*/
+p.nou{
+    line-height: 1.7em;
+}
+
+/*side-menu-table*/
+
+/*文字装飾をリセット*/
+aside.side{
+    list-style: none;
+}
+
+/*文字装飾をリセット*/
+.side-link{
+    list-style-type: none;
+}
+
+/*カテゴリーのサイズと中身を調整*/
+div.side-menu{
+    text-align: left;
+}
+
+
+/*カテゴリのサイズを調整*/
+div.side-menu li{
+    padding: 5px;
+}
+
+/*カテゴリーメニューに下線を引く*/
+.side-link li{
+    border-bottom: solid 1px grey;
+    padding:15%;
+}
+
+
+/*カテゴリーにマウスオーバー*/
+.side-menu li a:hover{
+    color: aqua;
+}
+
+/*このお店の立ち位置*/
+div.side-about{
+    margin-top: 20%;
+}
+
+/*カテゴリーとこのお店についてに線を引き、ここだけ色を変える*/
+.category,
+.this-about{
+    border-bottom: solid 1px;
+    padding:10px;
+}
+
+
+/*カテゴリーの下線の色を変える*/
+.category,
+.this-about{
+    border-color: aqua;
+}
+/*カテゴリの余白を整える*/
+.about-about{
+    padding:5px;
+}
+
+
+/*menu*/
+
+/*メニューロゴの編集*/
+
+/*ブレンドモードで背景を淡色に。*/
+body.menu{
+    background: #c0c0c0c0
+     url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/153/522/743/menu-bg.jpg") no-repeat;
+    
+    background-blend-mode: screen;
+    
+    background-size: cover;
+    height: 100vh;
+    
+    background-position:top;
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed;
+}
+
+
+/*Menuロゴを中央揃えに。ディスプレイサイズを合わせる*/
+section.menu-logo{
+    text-align: center;
+}
+
+/*メニューロゴのカラーを指定*/
+h1.menu-moji{
+    color: darkred;
+    font-size: 100px;
+    margin: auto auto 20px auto;
+}
+
+/*menuロゴの立ち位置*/
+.menu-top{
+    padding:0 0 0 0;
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+
+/*テキストを中央揃えに*/
+p.news-term{
+    text-align:center;
+}
+
+/*末文だけテキストを揃えない*/
+p.news-term:last-child{
+    text-align:match;
+}
+
+/*ここからタイルへ。*/
+/*背景を白に戻す*/
+article.menu-list{
+    background-color: white;
+}
+
+@media screen and (max-width:700px){
+    article.menu-list{background-color: white;}}
+
+
+
+/*グランドメニュー上3つの仕切り@PCデザイン*/
+    .grand-menu{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:auto;
+    }
+
+
+@media screen and (max-width:700px){
+    .grand-menu-mb{
+        display:initial;
+        display:block;
+    }
+}
+
+/*グランドメニューの位置調整*/
+/*コーヒー画像の位置*/
+.grand-coffee{
+    grid-column:2/4;
+    grid-row:1/3;
+    padding: 5px;
+}
+
+@media screen and (max-width:700px){
+    .grand-coffee{
+    padding:10px;
+    }
+}
+
+/*ストゼロの位置*/
+.grand-strong{
+    grid-column:4/5;
+    grid-row:1/2;
+    padding: 5px;
+}
+
+@media screen and (max-width:700px){
+    .grand-strong{
+    padding:10px;
+    }
+}
+
+/*スパイスの位置*/
+.grand-spice{
+    grid-column:4/5;
+    grid-row: 2/3;
+    padding: 5px;
+}
+
+/*グランドメニューの画像の大きさ*/
+/*コーヒー画像の大きさ*/
+.hot-coffee{
+    width:100%;
+}
+
+@media screen and (max-width:700px){
+    .hot-coffee{
+     border-radius:15%
+    }
+}
+
+/*ストゼロの大きさ*/
+.sto-zero{
+    width: 100%;
+}
+
+@media screen and (max-width:700px){
+    .sto-zero{
+        border-radius:15%;
+    }
+}
+
+
+/*スパイスの大きさ*/
+.spice{
+    width: 100%;
+}
+
+@media screen and (max-width:700px){
+    .spice{
+        border-radius:15%;
+    }
+}
+
+/*サブメニューの仕切り*/
+.sub-menu{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:auto;
+}
+
+
+/*サブメニューの位置調整：上段*/
+.sub-chiken{
+    grid-column:2/3;
+    grid-row: 1/2;
+    padding: 15px;
+}
+
+.sub-tsukemono{
+    grid-column:3/4;
+    grid-row: 1/2;
+    padding: 15px;
+}
+
+.sub-men{
+    grid-column:4/5;
+    grid-row: 1/2;
+    padding: 15px;
+}
+
+/*サブメニューの位置調整：下段*/
+.sub-soup{
+    grid-column:2/3;
+    grid-row: 2/2;
+    padding: 15px;
+}
+
+.sub-asian{
+    grid-column:3/4;
+    grid-row: 2/2;
+    padding: 15px;
+}
+
+.sub-pizza{
+    grid-column:4/5;
+    grid-row: 2/2;
+    padding: 15px;
+}
+
+@media screen and (max-width:700px){
+    .sub-menu-mb{display:initial;}}
+
+
+/*サブメニューの画像の大きさ*/
+.chiken,
+.kimuchi,
+.noodle,
+.chashu,
+.asian,
+.pizza{
+    width:100%;
+}
+
+@media (max-width:700px){
+    .chiken{border-radius:15%;}
+}
+
+@media (max-width:700px){
+    .kimuchi{border-radius:15%;}
+}
+
+@media (max-width:700px){
+    .noodle{border-radius:15%;}
+}
+
+@media (max-width:700px){
+    .chashu{border-radius:15%;}
+}
+
+@media (max-width:700px){
+    .asian{border-radius:15%;}
+}
+
+@media (max-width:700px){
+    .pizza{border-radius:15%;}
+}
+
+/*contact*/
+/*contactの背景 heightで全て上に*/
+/*width: 100vwで横に余白を与えない*/
+body.contact{
+   background: #c0c0c0c0
+       url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/612/374/3fb/contact-bg.jpg");
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-blend-mode:screen;
+    background-size: cover;
+    height: top;
+    width: 100vw;
+}
+
+/*contact-logoのマークの大きさ*/
+.contact-logo-mark{
+    font-size:200%;
+    width:100%;
+    padding: 1%;
+    color: darkred;
+}
+
+/*ロゴ画像の位置を指定。巻き込まれるように*/
+.contact-logo{
+    margin:0.5% auto 0 20%;
+}
+
+
+@media screen(max-width:400px){
+    .contact-logo{
+        max-width: 400px;
+        margin-left: 0;
+        margin:0.5% auto;
+        display:flex;
+    }
+}
+
+/*お問い合わせフォームの作成*/
+/*お問い合わせフォームの立ち位置
+「margin:5px auto 0 200px;」で共通
+*/
+.form{
+    margin:5px auto 0 20%;
+}
+
+@media screen(min-width:400px){
+    .form{
+    max-width:400px;
+    margin: 5px auto auto auto;
+    }
+}
+
+/*お問い合わせ全体の調整*/
+dl.form-label{
+    padding: 5px;
+}
+
+@media screen (min-width:400px){
+    dl.form-label{
+        width: 400px;
+        padding: 100%;
+    }
+}
+
+
+/*テキストボックス全ての背景の装飾*/
+.name-text,
+.e-mail-text,
+.messe-text{
+    margin:1% 10% 1% auto;
+    text-decoration: none;
+    border: white;
+}
+
+
+/*お名前とメールアドレスの装飾*/
+.name-text [type="text"]{
+    width: 200px;
+    height: 50px;
+    background-color:white;
+}
+
+/*E-mailのボックスサイズ*/
+.e-mail-text [type="email"]{
+    width:200px;
+    height: 50px;
+    background-color:white;
+}
+
+/*メッセージのボックスサイズ*/
+.messe-text [type="textarea"]{
+    width:80%;
+    height:200px;
+    background-color:white;
+}
+/*メッセージボックスの中身*/
+.messe-text::placeholder{
+    vertical-align: top;
+}
+
+
+/*送信ボタンの周り*/
+dt.go{
+    margin-top: 20px;
+    text-decoration: none;
+    width:120px;
+    height:60px;
+    background-color: aquamarine;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    font-size: 20px;
+    color: white;
+}
+
+/*送信ボタンの中身*/
+input.go-button{
+    display: flex;
+    justify-content: center;
+    width: 115px;
+    height: 55px;
+    padding:5px;
+}
+
+
+/*ボタンの動きの要素*/
+/*カーソルを合わせると色が一緒になる*/
+.go-button:hover{
+    color:black;
+    opacity:0.5;
+}
+
+/*ボタンを押すと深く押し込まれる*/
+.go-button:active{
+  -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+}
+
+/*GFTDの住所のリストへ*/
+/*住所欄の背景を設定*/
+article.map{
+    width: 100vw;
+    background-color: white;
+}
+
+
+/*住所の親要素*/
+.addres{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 10%;
+}
+
+@media screen and (max-width:700px){
+    .addres{
+    display:grid;
+}
+}
+
+@media screen and (max-width:700px){
+    .addres-position{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*渋谷の見出しに下線を引く*/
+.shibuya{
+    border-bottom: solid 1px aqua;
+    font-size:25px;
+}
+
+/*リスト装飾の廃止とリストの大きさ*/
+.addres-list{
+    width: 400px;
+    padding: 10px 5px 5px 5px;
+    list-style: none;
+    margin: 30px 0px 0px 10px;
+}
+
+.shibuya,
+.juusho{
+    padding: 5px;
+}
+
+@media screen and (max-width:700px){
+.addres-list,
+.shibuya,
+.juusho{width: 70%;  padding: 5px 5px 5px 5px;  list-style: tomato;
+}
+}
+
+/*Google-mapの余白を削除：左に空白を開ける*/
+.g-map-wrap{
+    margin:5%;
+    width: 600px;
+    height:400px;
+}
+
+@media screen and(min-width:700px){
+    .g-map-wrap{
+    width: 100%;
+    height: auto;
+    margin: 50%;
+    display: flex;
+    justify-content: center;
+    }
+}
+
+.this-is-g-map{
+    margin-bottom: 5px;
+}
+
+@media screen and(min-width:700px){
+.this-is-g-map{
+    width: 50%;
+}}
+
+
+/*ソーシャルネットワーク*/
+/*背景の色を変え、横いっぱいに広げる*/
+.SNS{
+    width:100vw;
+    background-color: antiquewhite;
+}
+
+.social-list-position{
+    display:flex;
+}
+
+@media screen and(min-width:700px){
+    .social-list-position{
+    display: initial;
+    display: block;}}
+
+/*SNSコンテンツの全体の調整*/
+.sns-list{
+    width: 100%;
+    padding: 30px;
+}
+
+/*SNSタイトルのフォントの大きさ：下線を引き、余白を作る*/
+.sns-logo{
+    font-size:25px;
+    text-decoration-line: underline;
+    text-decoration-color: aqua;
+    margin: 20px 0;
+}
+
+
+/*footer*/
+
+/*背景の指定：25pxサイズ ディスプレイをアクティブに*/
+footer{
+    background-color: saddlebrown;
+    padding:25px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*著作権：フォントサイズ。親要素と関連したサイズで*/
+footer div.copy{
+    font-size: 25px;
+    color:azure;
+}

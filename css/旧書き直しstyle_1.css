@@ -1,0 +1,733 @@
+@charset="UTF-8";
+/*すべてのフォントを100%に*/
+*{
+    font-size:100%;
+}
+
+/*フォント*/
+body{
+  font-family: "Philosopher";
+}
+
+
+/*共通項目*/
+
+/*header*/
+
+/*headerを横並びにする*/
+
+
+/*ロゴ画像の大きさを指定*/
+header img.pc-logo{
+    width: 200px;
+    margin: 5%;
+}
+
+    
+/*headerの画像の大きさの指定*/
+
+@media screen and(max-width:768px){
+    /**header img.pc-logo{
+        display: none;
+    }*/
+    header img.sumaho-logo{
+        width: 300px;
+        margin:5%;
+    }
+    
+}
+
+
+/*ロゴ画像の位置を指定。左に巻き込まれるように*/
+div.pc-coffee{
+    margin:0 auto 0 200px;
+}
+
+/*nav*/
+
+/*ナビゲーションの位置*/
+header div.navi{
+    margin:0 300px 0 auto;
+}
+
+
+/*「・」の削除
+余白の設定
+display指定で横並びにする
+*/
+header nav ul {
+    list-style-type: none;
+    margin:20px 0;
+    padding:0;
+    display: flex;
+}
+
+/*ヘッダー内のナビゲーションの設定：横並びに*/
+header nav ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+}
+
+/*ヘッダー内のナビゲーションの設定*/
+
+/*ディスプレイの固定とリンクカラーの設定*/
+header nav ul li a,
+header nav ul li a:link,
+header nav ul li a:visited{
+    display:block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color:darkred
+        ;
+}
+
+/*リンクを選択したときのマウスオーバー*/
+header nav ul li a:hover{
+    color: aqua;
+}
+
+/*↑共通項目終了*/
+
+
+
+/*↓ここからそれぞれのページへ*/
+
+
+/*index*/
+
+/*indexのみフルスクリーントップページ*/
+body.index-back{
+    background-attachment:fixed;
+    
+    background-image:url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/c3b/9e5/3e3/main-bg.jpg");
+    
+    background-position:center center;
+    
+    background-repeat: no-repeat;
+    
+    background-size:cover;
+    
+    height:100vh;
+}
+
+
+/*テキストを中央揃えに*/
+main.index{
+    text-align: center;
+}
+
+/*Well your make dayのタイトルののサイズと立ち位置*/
+.open h2{
+    margin-top: 80px;
+    margin-bottom:40px;
+    font-size:80px;
+}
+
+/*タイトルロゴのカラーを変える*/
+.top{
+    color: darkred;
+}
+
+/*サブタイトルのサイズの変更*/
+p.subtitle{
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+/*ボタンの装飾*/
+
+/*ボタンの縦の位置を調整*/
+div.login{
+    margin:5px auto 5px auto;
+}
+
+/*ボタンの大きさの指定*/
+button.button{
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-color:aquamarine;
+}
+
+/*ボタンをインラインブロック。文字の大きさと色の指定*/
+.button a{
+    display:inline-block;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+/*擬似：activeでボタンを押している感を演出*/
+.button,
+a:active{
+  -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+}
+
+
+/*↓ここからnews.htmlへ*/
+
+/*news_headerの背景*/
+section.news-title{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 300px;
+}
+
+/*NEWSの背景*/
+header.news-back,
+section.news-title
+{
+    background:no-repeat top;
+ background:url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/39e/08d/56b/news-bg.jpg");
+}
+
+/*ロゴの位置の調整*/
+.news-top{
+    margin:100px 0 0 0;
+}
+
+/*ロゴの中身を調整*/
+.news-logo{
+    color: darkred;
+    font-size:80px;
+    padding:0;
+}
+
+/*mainの調整*/
+
+/*mainを中央揃え：位置の調整*/
+div.news-main{
+    margin-top:5%;
+    margin-bottom:5%;
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*左メニューの位置調整：*/
+.news-left{
+    width: 200%;
+    margin-left: 20%;
+    margin-right:20%;
+}
+
+/*右メニューの位置調整*/
+aside.side{
+    margin-left:auto;
+    margin-right: 10%;
+}
+
+/*日付の背景*/
+.date-year{
+    width: 100px;
+    height:100px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+/*日付を調整*/
+/*Newsの日付とタイトル*/
+
+/*日付の文字の位置を指定
+日付の立ち位置を指定*/
+.date-year{
+    text-align: center;
+    padding-top:20px;
+    float:left;
+}
+
+/*日付のサイズ変更：下線を入れる*/
+h2.date{
+    font-size:25px;
+    border-bottom: 1px solid white;
+    padding-bottom:5px;
+}
+
+/*年と下線の距離*/
+h2.year{
+    padding-top: 10px;
+}
+
+/*日付：年の文字色の変更*/
+h2.date,
+h2.year{
+    color: white;
+}
+
+/*News見出しの先に文字の装飾*/
+/*店内開発の〜*/
+h2.news-index{
+    float: none;
+    font-size:25px;
+    margin-left:100px;
+    line-height: 2
+}
+
+/*カテゴリー*/
+h3.news-index{
+    line-height: 2;
+    margin: auto auto auto 100px;
+}
+
+/*見出しの文章の上を整理*/
+div.news-theme{
+    margin: 2%;;
+}
+
+/*画像サイズを指定*/
+img.pai{
+    width:460px;
+    height:300px;
+    margin: 5%;
+}
+
+/*刺激されてくださいの文章に行間をつける*/
+p.nou{
+    line-height: 1.7em;
+}
+
+/*side-menu-table*/
+
+/*文字装飾をリセット*/
+aside.side{
+    
+}
+
+/*文字装飾をリセット*/
+.side-link{
+    list-style-type: none;
+}
+
+/*カテゴリーのサイズと中身を調整*/
+div.side-menu{
+    text-align: left;
+}
+
+
+/*カテゴリのサイズを調整*/
+div.side-menu li{
+    padding: 5px;
+}
+
+/*カテゴリーメニューに下線を引く*/
+.side-link li{
+    border-bottom: solid 1px grey;
+    padding:20px;
+}
+
+
+/*カテゴリーにマウスオーバー*/
+.side-menu li a:hover{
+    color: aqua;
+}
+
+/*このお店の立ち位置*/
+div.side-about{
+    margin-top: 20%;
+}
+
+/*カテゴリーとこのお店についてに線を引き、ここだけ色を変える*/
+.category,
+.this-about{
+    border-bottom: solid 1px;
+    padding:10px;
+}
+
+/*カテゴリーの下線の色を変える*/
+.category,
+.this-about{
+    border-color: aqua;
+}
+/*カテゴリの余白を整える*/
+.about-about{
+    padding:5px;
+}
+
+
+/*menu*/
+
+/*メニューロゴの編集*/
+
+/*ブレンドモードで背景を淡色に。*/
+body.menu{
+    background: #c0c0c0c0
+     url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/153/522/743/menu-bg.jpg") no-repeat;
+    
+    background-blend-mode: screen;
+    
+    background-size: cover;
+    height: 100vh;
+    
+    background-position:top;
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed;
+}
+
+
+/*Menuロゴを中央揃えに。ディスプレイサイズを合わせる*/
+section.menu-logo{
+    text-align: center;
+}
+
+/*メニューロゴのカラーを指定*/
+h1.menu-moji{
+    color: darkred;
+    font-size: 100px;
+    margin: auto auto 20px auto;
+}
+
+/*menuロゴの立ち位置*/
+.menu-top{
+    padding:0 0 0 0;
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+
+/*テキストを中央揃えに*/
+p.news-term{
+    text-align:center;
+}
+
+/*末文だけテキストを揃えない*/
+p.news-term:last-child{
+    text-align:match;
+}
+
+
+/*ここからタイルへ。*/
+/*背景を白に戻す*/
+article.tile{
+    background-color: white;
+}
+
+
+/*画像の周りを削る*/
+img.hot-coffee,
+img.sto-zero,
+img.spice,
+img.chiken,
+img.kimuchi,
+img.noodle,
+img.chashu,
+img.asian,
+img.pizza{
+    border-radius: 5%;
+}
+
+
+
+/*コーヒの写真の大きさを整える*/
+img.hot-coffee{
+    width:400px;
+}
+
+
+/*コーヒー以外の写真の大きさを揃える*/
+img.sto-zero,
+img.spice,
+img.chiken,
+img.kimuchi,
+img.noodle,
+img.chashu,
+img.asian,
+img.pizza{
+    width:100px;
+    }
+
+
+/*CSSグリッド処理*/
+
+/*タイルの要素に間隔を開ける*/
+div.menu{
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: 1fr 100px 100px 100px 100px 100px 1fr ;
+    grid-template-rows: 100px 100px 100px 100px 1fr ;
+}
+
+
+
+/*コーヒ画像：最も左：2行目から5行目を指定*/
+h3.food-drink.coffee{
+    grid-column:2/5;
+    grid-row: 1/3;
+}
+
+
+/*ストゼロの画像：最上行：最右列*/
+p.food-drink.strong-zero{
+    grid-column:6/7;
+    grid-row: 1/2;
+}
+
+/*スパイスの画像：上から2段目：最右列*/
+p.food-spice{
+    grid-column:6/7;
+    grid-row:3/4;
+}
+
+/*鳥からの画像：最も左：6段目と左の列*/
+p.food-fried-chicken{
+    grid-column:2/3;
+    grid-row:4/5;
+}
+
+/*キムチの画像：中央真ん中*/
+p.food-tsukemono{
+    grid-column:4/5;
+    grid-row:4/5;
+}
+
+/*カップ麺の画像：上から3段目：最右列*/
+p.food-men{
+    grid-column:6/7;
+    grid-row:4/5;
+}
+
+
+/*チャーシュー麺の画像：上から4段目：最も左の列*/
+p.food-soup{
+    grid-column:2/3;
+    grid-row:6/7;
+}
+
+
+/*アジアン料理の画像：上から4段目：中央に配置*/
+p.food-plate{
+    grid-column:4/5;
+    grid-row:6/7;
+}
+
+
+/*ピザの画像：上から5段目：最右列*/
+p.food-pan{
+    grid-column:6/7;
+    grid-row:6/7;
+}
+
+/*タイル周りのサイズ*/
+article.tile{
+    margin: 15px;
+}
+
+
+/*contact*/
+/*contactの背景 heightで全て上に*/
+/*width: 100vwで横に余白を与えない*/
+body.contact{
+   background: #c0c0c0c0
+       url("https://s3.amazonaws.com/thinkific/file_uploads/55350/attachments/612/374/3fb/contact-bg.jpg");
+    
+    background-position:center center;
+    
+    background-repeat: no-repeat;
+    
+    background-blend-mode:screen;
+    background-size: cover;
+    
+    height: top;
+    width: 100vw;
+}
+
+/*contact-logoのマークの大きさ*/
+.contact-logo-mark{
+    font-size:80px;
+    color: darkred;
+}
+
+/*ロゴ画像の位置を指定。巻き込まれるように*/
+.contact-logo{
+    margin:5px auto 0 200px;
+}
+
+
+/*お問い合わせフォームの作成*/
+/*お問い合わせフォームの立ち位置
+「margin:5px auto 0 200px;」で共通
+*/
+.form{
+    margin:5px auto 0 200px;
+}
+
+/*お問い合わせ全体の調整*/
+dl.form-label{
+    width:990px;
+    padding: 5px;
+}
+
+
+/*テキストボックス全ての背景の装飾*/
+.name-text,
+.e-mail-text,
+.messe-text{
+    margin:10px auto 10px auto;
+    text-decoration: none;
+    border: white;
+}
+
+/*お名前とメールアドレスの装飾*/
+.name-text [type="text"]{
+    width:300px;
+    height: 60px;
+    background-color:white;
+}
+
+/*E-mailのボックスサイズ*/
+.e-mail-text [type="email"]{
+    width:300px;
+    height: 60px;
+    background-color:white;
+}
+
+/*メッセージのボックスサイズ*/
+.messe-text [type="textarea"]{
+    width:800px;
+    height:200px;
+    background-color:white;
+}
+
+
+/*送信ボタンの周り*/
+dt.go{
+    margin-top: 20px;
+    text-decoration: none;
+    width:120px;
+    height:60px;
+    background-color: aquamarine;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    font-size: 20px;
+    color: white;
+}
+
+/*送信ボタンの中身*/
+input.go-button{
+    display: flex;
+    justify-content: center;
+    width: 115px;
+    height: 55px;
+    padding:5px;
+}
+
+
+
+/*ボタンの動きの要素*/
+/*カーソルを合わせると色が一緒になる*/
+.go-button:hover{
+    opacity:0.5;
+}
+
+/*ボタンを押すと深く押し込まれる*/
+.go-button:active{
+  -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+}
+
+
+/*GFTDの住所のリスト*/
+
+
+/*住所欄の背景を設定*/
+article.map{
+    width: 100vw;
+    background-color: white;
+}
+
+
+/*渋谷の見出しに下線を引く*/
+.shibuya{
+    border-bottom: solid 1px aqua;
+    font-size:25px;
+}
+
+
+/*リスト装飾の廃止とリストの大きさ*/
+.addres-list,
+.shibuya,
+.juusho{
+    width: 300px;
+    padding: 5px 5px 5px 0;
+    list-style: tomato;
+    display: block;
+}
+
+/*地図とリストの中央揃え*/
+.addres{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    margin:auto 14% ;
+}
+
+/*Google-mapの余白を削除：左に空白を開ける*/
+div.g-map-wrap{
+    padding: none;
+    margin-left: 50px;
+}
+
+
+/*ソーシャルネットワーク*/
+
+/*背景の色を変え、横いっぱいに広げる*/
+.SNS{
+    width:100vw;
+    background-color: antiquewhite;
+}
+
+
+/*リスト内に下線を引く：位置の調整*/
+.sns-list-position{
+    list-style-type: none;
+    padding:50px;
+    padding:10% auto 10% auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*SNSコンテンツの全体の調整*/
+.sns-list{
+    margin: 0 50px;
+}
+
+/*SNSタイトルのフォントの大きさ：下線を引き、余白を作る*/
+.sns-logo{
+    font-size:25px;
+    text-decoration-line: underline;
+    text-decoration-color: aqua;
+    margin: 20px 0;
+}
+
+
+/*コンテンツの大きさ*/
+dd.Facebook,
+dd.Twitter,
+dd.Youtube{
+    width:250;
+    height:400;
+}
+
+/*footer*/
+
+/*背景の指定：25pxサイズ ディスプレイをアクティブに*/
+footer{
+    background-color: saddlebrown;
+    padding:25px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*著作権：フォントサイズ。親要素と関連したサイズで*/
+footer div.copy{
+    font-size: 25px;
+    color:azure;
+}
